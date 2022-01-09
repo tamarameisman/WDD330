@@ -26,10 +26,14 @@ img {
 }
 footer{
     padding: 10px;
+    font-family: 'Abel', sans-serif;
 }
 
 h1 {
     font-family: 'Roboto', sans-serif;
+}
+ul {
+    font-family: 'Abel', sans-serif;
 }
 
 h2 {
