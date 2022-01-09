@@ -25,12 +25,14 @@ img {
     box-shadow: 0 0 20px black;
 }
 footer{
-    padding: .1rem;
+    padding: 10px;
 }
+
 h1 {
     font-family: 'Roboto', sans-serif;
 }
+
 h2 {
-border-bottom: 2px solid black;
-font-family: 'Abel', sans-serif;
+    border-bottom: 2px solid black;
+    font-family: 'Abel', sans-serif;
 }
