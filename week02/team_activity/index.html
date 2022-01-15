@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercise 1</h1>
+    <p></p>
+    <input id="name" type="text">
+    <button onClick="display()">Click Me</button>
+    <div id="displayName"></div>
+    <p></p>
+    <h1>Exercise 2</h1>
+    <p></p>
+    <input id="number" type="text">
+    <button onClick="sum()">Click Me</button>
+    <div id="displayNumber"></div>
+    <p></p>
+
+
+    <script>
+        function display() {
+            let input=document.getElementById("name").value;
+            let div=document.getElementById("displayName");
+            div.innerHTML=input;
+        }
+        function sum() {
+            let input=document.getElementById("number").value;
+            let div=document.getElementById("displayName");
+            div.innerHTML=input;
+        }
+    </script>
+
+</body>
+</html>

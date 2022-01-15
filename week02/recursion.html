@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Althought my code is right, it is not consittered resursion. Here is the teachers code:</p>
+    <p>function isEven(n) {
+        if (n == 0) return true;
+        else if (n == 1) return false;
+        else if (n < 0) return isEven(-n);
+        else return isEven(n - 2);
+      }
+      
+      console.log(isEven(50));
+      // → true
+      console.log(isEven(75));
+      // → false
+      console.log(isEven(-1));
+      // → false</p>
+    <script>
+        write = function(textToWrite){
+            console.log(textToWrite);
+            let p = document.createElement("p");
+                p.innerText= textToWrite;
+                document.body.appendChild(p);
+    
+        }
+        const isEven = function (x) {
+            if (x % 2 == 0){
+                write(` ${x} is a even number`);
+                return true;
+            }
+            if (x % 2 !== 0){
+                write(` ${x} is an odd number`);
+                
+                return false;
+            }
+            
+            
+          };
+          write(isEven(50));
+          write(isEven(75));
+          write(isEven(-1));
+          
+    </script>
+</body>
+</html>

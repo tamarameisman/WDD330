@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>html is eating my spaces look at the console.</p>
+    <script>
+        write = function(textToWrite){
+            let p = document.createElement("p")
+                p.innerText= textToWrite
+                document.body.appendChild(p)
+    
+        }
+        let size = 8;
+
+        let board = "";
+
+        for (let y = 0; y < size; y++) {
+            for (let x = 0; x < size; x++) {
+                if ((x + y) % 2 == 0) {
+                board += " ";
+                } else {
+                board += "#";
+                }
+            }
+            board += "\n";
+        }
+
+console.log(board);
+write(board)
+    </script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 Notes</title>
+</head>
+<body>
+    <h1>Javascript: Novice to Ninja</h1>
+    <h2>Ch2: Programmming basics<</h2>
+    <p>
+        <ul>
+        
+            <li>// this is a short comment</li>
+            <li>/* This is a longer comment
+                anything here will be ignored
+                This is a useful place to put notes
+                */</li>
+            <li>Reserved Words: abstract, await, boolean, break, byte, case, catch, char, class, const, continue, debugger, default, delete, do, double, else, enum, export, extends, false, final, finally, float, for, function, goto, if, implements, import, in instanceof, int, interface, let, long, native, new, null, package, private, protected, public, return, short, static, super, switch, synchronized, this, throw, throws, transient, true, try, typeof, var, volatile, void, while, with, yield</li>
+            <li>Can't use reserved words as var names</li>
+            <li>Data Types: String, symbol, number, boolean, undefined, null</li>
+            <li>Objects: arrays, functions, object literals </li>
+            <li>Declaring using "const" or "let"</li>
+            <li>Global scope is a variable declared outside of a block...meaning it is accassible everywhere in the program</li>
+            <li>Local Scope is a variable defined inside a block using "let" or "const" and will only be available inside that block</li>
+        </ul>
+        
+    </p>
+    <p>
+        <ul>
+        
+            <li>Backslashes</li>
+            <li>Single quote marks \'</li>
+            <li>Double quote marks \"</li>
+            <li>End of line \n</li>
+            <li>Carriage return \r</li>
+            <li>Tab \t</li>
+
+        </ul>
+        
+    </p>
+    <p>
+        <ul>
+        
+            <li>Symbol...When would I use the symbol()?</li>
+            <li>Octal and Hexadecimal numbers? 0xAF; // A represents 10, F represents 15
+                << 175</li>
+            
+        </ul>
+        
+    </p>
+    <p>
+        <ul>
+        
+            <li>Exponential Notation</li>
+            <li>1e6 = 1 + 6Zeros = 10000000</li>
+            <li>2E3 = 2 + 3Zeros = 2000</li>
+            <li>2.56-3 = 2.5 - 3Zeros = .0025</li>
+
+        </ul>
+       
+    </p>
+    <p> 
+        <ul>
+            <li>Numbers></li>
+            <li>toFixed() - round to fixed number of decimal places. PI.toFixed(3); // only one dot is needed when using constants or variables
+                << "3.142"</li>
+            <li>let points = 0; // initialize points score to zero
+                << 0
+                
+                points = points + 10;
+                << 10</li>
+            <li>points -= 5; // decreases points by 5
+                << 15
+                </li>
+            <li>points *= 2; // doubles points
+                << 30</li>
+            <li>Why would I ever use "Infinity"?</li>
+        </ul>
+    </p>
+
+    <p>
+        <ul>
+            <li>Equality, = assigns a var, == checks if var is equal to something, === check if it is same data exactly</li>
+        </ul>
+    </p>
+    <h2>Ch3: Arrays, Logic and Loops<</h2>
+    <p>
+        <ul>
+            <li>array = []</li>
+            <li>set = ()</li>
+            <li>when would I use a "set" instead of an array?</li>
+            <li>Sets take out the duplicates</li>
+            <li>To demonstrate this, first we'll create a set of three items:
+
+            
+                const shoppingSet = new Set().add('Apples').add('Bananas').add('Beans');
+                
+                shoppingSet
+                << Set { 'Apples', 'Bananas', 'Beans' }</li>
+            <li>Then we convert it into an array:
+
+                
+                const shoppingArray = [...shoppingSet]
+                
+                shoppingArray
+                << [ 'Apples', 'Bananas', 'Beans' ]</li>
+        </ul>
+   </p>
+    <p>
+        <ul>
+            <li>Logic</li>
+            <li>If Statements, Else Statements</li>
+            <li>Ternary operator logic is HARD</li>
+            <li>condition ? (//code to run if condition is true) : (//code to run if condition is false)</li>
+            <li>console.log(`n is a ${(n%2 === 0)? 'even' : 'odd'} number`);</li>
+            <li>Switch Statements</li>
+                <li>if (number === 4) {
+                    console.log('You rolled a four');
+                    } else if (number === 5) {
+                    console.log('You rolled a five');
+                    } else if(number === 6){
+                    console.log('You rolled a six');
+                    } else {
+                    console.log('You rolled a number less than four');
+                    }</li>
+                <li>switch (number) {
+                    case 4:
+                    console.log('You rolled a four');
+                    break;
+                    case 5:
+                    console.log('You rolled a five');
+                    break;
+                    case 6:
+                    console.log('You rolled a six');
+                    break;
+                    default:
+                    console.log('You rolled a number less than four');
+                    break;
+                }</li>
+            <li>While loops</li>
+            <li>for...do...for</li>
+    <h2>Ch4: Functions<</h2>
+            <p> Functions are first-class objects that behave the same way as other values.|
+
+                Function literals can be defined using the function declaration, or by creating a function expression by assigning an anonymous function to a variable.|
+                
+                All functions return a value. If this is not explicitly stated, the function will return undefined.|
+                
+                A parameter is a value that is written in the parentheses of a function declaration and can be used like a variable inside the function’s body.|
+                
+                An argument is a value that is provided to a function when it is invoked.|
+                
+                The arguments variable is an array-like object that allows access to each argument provided to the function using index notation.|
+                
+                The rest operator can be used to access multiple arguments as an array.|
+                
+                Default arguments can be supplied to a function by assigning them to the parameters.|
+                
+                Arrow functions are a new shorthand notation that can used for writing anonymous functions in ES6.|
+                
+                Function declarations can be invoked before they are defined because they are hoisted to the top of the scope, but function expressions cannot be invoked until after they are defined.|
+                
+                A callback is a function that is provided as an argument to another function.|
+                
+                Everything that isn’t a primitive data type in JavaScript is an object ― which is the topic of our next chapter.|
+                
+            </p>
+    <h1>Eleoquent JavaScript</h1>
+    
+    <h2>Chapters 2-4 reading and exercises</h2>
+
+        
+        
+
+
+
+</body>
+</html>

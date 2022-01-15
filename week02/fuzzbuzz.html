@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    write = function(textToWrite){
+        let p = document.createElement("p")
+            p.innerText= textToWrite
+            document.body.appendChild(p)
+
+    }
+    for (let number = 0; number <=100; number++){
+        if (number % 3 == 0 && number % 5 == 0){
+            console.log("FuzzBuzz");
+            write("FuzzBuzz")
+            continue;
+            }
+        if (number % 3 == 0){
+            console.log("Fuzz");
+            write("Fuzz")
+
+            continue;
+            }
+        if (number % 5 == 0 && number % 3 != 0){
+            console.log("Buzz");
+            write("Buzz")
+
+            continue;
+            }
+        console.log(number)
+        write(number)
+
+    }
+    </script>
+</body>
+</html>

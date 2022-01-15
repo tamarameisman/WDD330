@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        write = function(textToWrite){
+            console.log(textToWrite);
+            let p = document.createElement("p");
+                p.innerText= textToWrite;
+                document.body.appendChild(p);
+    
+        }
+        let countChar = function(searchString, findLetter){
+            result = 0;
+            for (let counter = 0; counter <= searchString.length; counter++){
+                if(searchString[counter] == findLetter){
+                    result ++;
+                }
+            }
+            return result;
+        }
+        let countBs = function(x){
+            return countChar(x,"B");
+        };
+        write(countBs("BBC"));
+        write(countChar("kakkerlak","k"))
+        write(countChar("Tamara Meisman", "a"))
+    </script>
+    
+</body>
+</html>
