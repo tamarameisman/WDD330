@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 Notes</title>
+</head>
+<body>
+    <h1>Week 3 notes</h1>
+    <h2>Object Methods, "this"</h2>
+    <p>
+        <ul>
+        
+            <li>let user = {</li>
+            <li>  name: "John",</li>
+            <li>  age: 30,</li>
+            <li>  sayHi() {</li>
+            <li>    alert(this.name);</li>
+            <li>  }</li>
+            <li>};</li>
+            <li>user.sayHi(); // John</li>
+
+        </ul>
+        
+    </p>
+    <h2>JS: Novice to Ninja"</h2>
+    <h3>CH5: Objects</h3>
+
+    <p>
+        <ul>
+        
+            <li>RegExp</li>
+            <li>For example, say you were looking for any word ending in 'ing', you could use the regular expression /[a-zA-Z]+ing$/.</li>
+            <li>const pattern = /[a-zA-Z]+ing$/;</li>
+            <li>pattern.test('joke');
+                << false</li>
+            <li>pattern.test('joking');
+                << true</li>
+
+        </ul>
+        
+    </p>
+    <p>
+        <ul>
+        
+            <li>Regular Expression Properties?</li>
+            <li>g sets the global property to true</li>
+            <li>i sets the ignoreCase property to true</li>
+            
+        </ul>
+        
+    </p>
+    <p>
+        <ul>
+        
+            <li>Special Characters</li>
+            <li>. matches any character, except line breaks</li>
+            <li>\w matches any word character, and is equivalent to [A-Za-z0-9_]</li>
+            <li>\W matches any non-word character, and is equivalent to [\^A-Za-z0-9_</li>
+            <li>\d matches any digit character, and is equivalent to [0-9]</li>
+            <li>\D matches any non-digit character, and is equivalent to [^0-9]</li>
+            <li>\s matches any whitespace character, and is equivalent to [ \t\r\n\f]</li>
+            <li>\S matches any non-whitespace character, and is equivalent to [^ \t\r\n\f]</li>
+
+        </ul>
+       
+    </p>
+    <h3>CH6: The Document Object Model</h3>
+
+    <p>
+        <ul>
+            <li>Getting elements ― getElementById, getElementsByClassName, getElementsByTagName, querySelector and querySelectorAll</li>
+        </ul>
+    </p>
+    <p>
+        <ul>
+            <li>the setAttribute method can be used to add it to the element. For example, we can add an id of 'amazon' to the wonderWoman element:</li>
+            <li>wonderWoman.setAttribute('id','amazon');</li>
+            <li>wonderWoman.getAttribute('id');
+                << 'amazon'</li>
+            <li>wonderWoman
+                << <li class=​"villain" id=​"amazon">​Wonder Woman​</li></li>
+        </ul>
+    </p>
+    <p>
+        <ul>
+            <li>Creating element requests three steps: Create the element node, Create the text node, Append the text node to the element node</li>
+            <li>quick example:</li>
+            <li>const flash = document.createElement('li');
+                flash.textContent = 'Flash';</li>
+        </ul>
+    </p>
+    <p>
+        <ul>
+            <li>updateing CSS = style property</li>
+            <li>quick example:</li>
+            <li>const heroes = document.getElementById('roster');
+                const superman = heroes.children[0];
+                
+                superman.style.border = "red 2px solid";
+                << "red 2px solid"</li>
+            <li>superman.style.backgroundColor = 'blue';
+                << "blue"</li>
+
+        </ul>
+    </p>
+    <h3>CH7: Events</h3>
+    <p>Every time a user interacts with a web page, such as clicking on a link, pressing a key, or moving a mouse, an event occurs that our program can detect and then respond to.</p>
+    <p>
+        <ul>
+            <li> addEventListener()</li>
+            <li>document.body.addEventListener('click',doSomething);</li>
+            <li>addEventListener('click', () => alert('You Clicked!'));</li>
+            
+        </ul>
+    </p>
+    <p>
+        <ul>
+            <li>If you need to implement gestures, it's probably a good idea to use a library such as Hammer.JS or zingtouch that makes events such as swipe, pinch and rotate easy to implement.</li>
+            
+        </ul>
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script>
+        let calculator = {
+            number1: 0,
+            number2: 0,
+            read(){
+                this.number1 = parseInt(prompt("First number?", "0"));
+                this.number2 = parseInt(prompt("Second number?", "0"));
+            },
+            sum(){
+                let total = this.number1 + this.number2;
+                return total;
+            },
+            mul(){
+                let total = this.number1 * this.number2;
+                return total;
+            },
+        }
+        calculator.read();
+        alert( calculator.sum() );
+        alert( calculator.mul() );
+        
+
+        
+    </script>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <p>Create an object calculator with three methods:</p>
+        <ul>
+            <li>read() prompts for two values and saves them as object properties.</li>
+            <li>sum() returns the sum of saved values.</li>
+            <li>mul() multiplies saved values and returns the result.</li>
+        </ul>
+</body>
+</html>

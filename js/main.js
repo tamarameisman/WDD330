@@ -47,13 +47,26 @@ const assignments = [
         label: "Week 03 notes",
         url: "week03/index.html" ,
         child:[
+            {
+                label: "Ninja Project",
+                url: "week03/ninja_project/index.html" 
+            },
+            {
+                label: "Drum Kit",
+                url: "week03/drum_kit/index.html" 
+            },
+            {
+                label: "Clock",
+                url: "week03/clock/index.html" 
+            },
+            {
+                label: "Array Cardio",
+                url: "week03/array_cardio/index.html" 
+            },
 
         ]
     },
-    {
-        label: "Week03 ",
-        url: "#" 
-    },
+    
     {
         label: "Week04 notes",
         url: "week04/index.html" 
