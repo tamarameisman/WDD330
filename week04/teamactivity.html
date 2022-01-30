@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100%;
+        }
+        div{
+            display: inline-block;
+            padding: 25px;
+            background-color: rgb(215, 234, 250);
+            text-align: center;
+        }
+        section {
+            display: grid;
+            grid-template: 1fr 1fr 1fr/ 1fr 1fr 1fr;
+            width: 50%
+        }
+        .outset {
+            border-style: outset;
+
+        }
+        .inset {
+            border-style: inset;
+
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <section class="board">
+        <div class="outset"> 1 </div>
+        <div class="outset"> 2  </div>
+        <div > 3  </div>
+        <div class="outset"> 4 </div>
+        <div class=> 5 </div>
+        <div class="inset"> 6 </div>
+        <div > 7 </div>
+        <div class="inset"> 8 </div>
+        <div class="inset"> 9 </div>
+    </section>
+    <section>
+        <button onclick="resetBoard()">Reset</button>
+        <p>
+            current player = <span id="playertag">Start</span>
+        </p>
+    </section>
+    <script>
+        let currentPlayer = "X"
+        function resetBoard(){
+            let board = document.querySelectorAll("div")
+            console.log(board)
+            board.forEach(i => {
+                i.innerHTML = ""
+            })
+            currentPlayer = "X"
+            setPlayerText()
+        }
+        function setPlayerText(){
+            let playerText = document.getElementById("playertag")
+            playerText.innerHTML = currentPlayer
+        }
+        function endTurn(){
+            if (currentPlayer=="X"){
+                currentPlayer="O"
+            }
+            else{
+                currentPlayer = "X"
+            }
+            setPlayerText()
+        }
+        function process_touchend(ev) {
+            
+            console.log(ev)
+        }
+        let board = document.querySelectorAll("div")
+        console.log(board)
+        board.forEach(i => {
+            i.addEventListener('click', event => {
+                if(!event.srcElement.innerHTML){
+                console.log(event)
+                event.srcElement.innerHTML=currentPlayer
+                endTurn()}
+            })
+            i.addEventListener('touchend', event => {
+                console.log(event)
+            })
+        })
+        resetBoard()
+    </script>
+</body>
+</html>

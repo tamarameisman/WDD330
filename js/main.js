@@ -43,39 +43,58 @@ const assignments = [
                 url: "week02/bean_counting.html" 
             },
         ]},
+        {
+            label: "Week 03 notes",
+            url: "week03/index.html" ,
+            child:[
+                {
+                    label: "Ninja Project",
+                    url: "week03/ninja_project/index.html" 
+                },
+                {
+                    label: "Drum Kit",
+                    url: "week03/drum_kit/index.html" 
+                },
+                {
+                    label: "Clock",
+                    url: "week03/clock/index.html" 
+                },
+                {
+                    label: "Array Cardio",
+                    url: "week03/array_cardio/index.html" 
+                },
+                
+            ]
+        },
+        
+        {
+            label: "Week04 notes",
+            url: "week04/index.html" ,
+            child:[
+                {
+                    label: "Hero Form",
+                    url: "week04/hero.html" 
+                },
+                {
+                    label: "Model-View-Controller(MVC)...List",
+                    url: "week04/list.html" 
+                },
+                {
+                    label: "EventListener (blur and focus)..Search",
+                    url: "week04/search.html" 
+                },
+                {
+                    label: "Prototypal Inheritance...turtle",
+                    url: "week04/turtle.html" 
+                },
+                
+            ]
+        },
     {
-        label: "Week 03 notes",
-        url: "week03/index.html" ,
-        child:[
-            {
-                label: "Ninja Project",
-                url: "week03/ninja_project/index.html" 
-            },
-            {
-                label: "Drum Kit",
-                url: "week03/drum_kit/index.html" 
-            },
-            {
-                label: "Clock",
-                url: "week03/clock/index.html" 
-            },
-            {
-                label: "Array Cardio",
-                url: "week03/array_cardio/index.html" 
-            },
-
-        ]
-    },
-    
-    {
-        label: "Week04 notes",
-        url: "week04/index.html" 
-    },
-    {
-        label: "Week04",
+        label: "Week05",
         url: "#" 
     },
-
+    
     
 ]
 const createList = function(items, parentULElelement){
