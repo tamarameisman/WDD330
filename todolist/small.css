@@ -1,0 +1,18 @@
+header,footer {
+    background-color: rgb(243, 205, 201);
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+}
+header {
+    padding: 1.5rem;
+    
+}
+.container, div {
+    border: 2px solid black;
+    padding: 10px;
+}
+button {
+    border: 2px solid black;
+
+}

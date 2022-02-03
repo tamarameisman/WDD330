@@ -91,8 +91,8 @@ const assignments = [
             ]
         },
     {
-        label: "Week05",
-        url: "#" 
+        label: "Week05 Notes",
+        url: "week05/falls_orig/notes.html" 
     },
     
     
