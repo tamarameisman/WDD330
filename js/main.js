@@ -90,13 +90,23 @@ const assignments = [
                 
             ]
         },
-    {
-        label: "Week05 Notes",
-        url: "week05/falls_orig/notes.html" 
-    },
-    
-    
+        {
+            label: "Week05 Notes",
+            url: "week05/falls_orig/notes.html" ,
+            child:[
+                {
+                    label: "CSS Variables",
+                    url: "week05/03 - CSS Variables/index.html" 
+                },
+                {
+                    label: "Flex Panel",
+                    url: "week05/05 - Flex Panel Gallery/index.html" 
+                },
+            ]
+        },             
 ]
+    
+
 const createList = function(items, parentULElelement){
     items.forEach(item=>{
         // create LI and A element
