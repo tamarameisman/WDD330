@@ -11,39 +11,48 @@
     <title>To-Do List</title>
 </head>
 <body>
+    
     <header>
         <h1>Todos</h1>
     </header>
     <section id="list-container" class="container">
-        <div class="todo-list">
-            <div class="todo done">
-                <button class="todo completed"></button>
-                <span>Sample Task Text</span>
-                <button class="delete-task">X</button>
-            </div>
-            <div class="todo">
-                <button class="todo"></button>
-                <span>Sample Task Text</span>
-                <button class="delete-task">X</button>
-            </div>
+        
+        <div class="todoDone">
+            <button class="todoCompleted"></button>
+            <span>Task</span>
+            <button class="deleteTask">X</button>
         </div>
-        <div class="filter-row">
-            <span>3 tasks left</span>
-            <select id="todo-filter">
-                <option value="All">All</option>
-                <option value="Active">Active</option>
-                <option value="Complete">Complete</option>
-            </select>
+        <div class="todoDone">
+            <button class="todoCompleted"></button>
+            <span>Task</span>
+            <button class="deleteTask">X</button>
         </div>
+        
     </section>
-    <section id="task-form">
-        <form action="Add Task">
-            <input type="text" name="new-task" id="new-task">
-            <button>+</button>
-        </form>
-    </section>
-<footer>
-        &copy; | Tamara Meisman | Date
+    <div class="filterRow">
+        <span>tasks left</span>
+            <form class="buttonWrap hidden" action="none"></form>
+            <input class="hidden radioLabel" type="radio" id="allTask" name="task">
+            <label class="buttonLabel" for="allTask">All</label>
+            <input class="hidden radioLabel" type="radio" id="activeTask" name="task">
+            <label class="buttonLabel" for="activeTask">Active</label>
+            <input class="hidden radioLabel" type="radio" id="completeTask" name="task">
+            <label class="buttonLabel" for="completeTask">Completed</label>
+                
+            </form>
+    </div>
+
+    <footer>
+        <section id="task-form">
+                <span><input type="text" placeholder="Add task here" name="new-task" id="new-task"></span>
+                <button id=addTaskBtn>+</button>
+        </section>
+       
     </footer>
+    <script src="ls.js"></script>
+    <script src="main.js"></script>
+    <script src="todo.js"></script>
+    <script src="utilities.js"></script>
+
 </body>
 </html>
