@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Roboto&display=swap" rel="stylesheet">
@@ -19,40 +19,33 @@
         
         <div class="todoDone">
             <button class="todoCompleted"></button>
-            <span>Task</span>
-            <button class="deleteTask">X</button>
-        </div>
-        <div class="todoDone">
-            <button class="todoCompleted"></button>
-            <span>Task</span>
+            <span>Add a Task</span>
             <button class="deleteTask">X</button>
         </div>
         
     </section>
-    <div class="filterRow">
-        <span>tasks left</span>
-            <form class="buttonWrap hidden" action="none"></form>
-            <input class="hidden radioLabel" type="radio" id="allTask" name="task">
+    <form id="filterForm"  class="filterRow">
+            <span id="leftTasks">0 tasks left</span>
+            <input class="hidden radioLabel" type="radio" id="allTask" name="filter" value="all">
             <label class="buttonLabel" for="allTask">All</label>
-            <input class="hidden radioLabel" type="radio" id="activeTask" name="task">
+            <input class="hidden radioLabel" type="radio" id="activeTask" name="filter" value="active">
             <label class="buttonLabel" for="activeTask">Active</label>
-            <input class="hidden radioLabel" type="radio" id="completeTask" name="task">
+            <input class="hidden radioLabel" type="radio" id="completeTask" name="filter" value="complete">
             <label class="buttonLabel" for="completeTask">Completed</label>
-                
-            </form>
-    </div>
-
+            
+        </form>
+    
     <footer>
         <section id="task-form">
-                <span><input type="text" placeholder="Add task here" name="new-task" id="new-task"></span>
-                <button id=addTaskBtn>+</button>
+            <span><input type="text" placeholder="Add task here" name="new-task" id="new-task"></span>
+            <button id=addTaskBtn>+</button>
         </section>
-       
+        
     </footer>
     <script src="ls.js"></script>
-    <script src="main.js"></script>
-    <script src="todo.js"></script>
-    <script src="utilities.js"></script>
-
+    <script type="module" src="utilities.js"></script>
+    <script type="module" src="todos.js"></script>
+    <script type="module" src="main.js"></script>
+    
 </body>
 </html>

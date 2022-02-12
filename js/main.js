@@ -104,30 +104,36 @@ const assignments = [
                 },
             ]
         },             
-]
+        {
+            label: "Week06 Midterm",
+            url: "todolist/index.html" ,
+            
+        },             
+    ]
     
-
-const createList = function(items, parentULElelement){
-    items.forEach(item=>{
-        // create LI and A element
-        const newAssignmentElement = document.createElement("li")
-        const newLinkElement = document.createElement("a")
-        // build A elements hyper link and text
-        newLinkElement.setAttribute("href", item.url)
-        newLinkElement.innerText = item.label
-        // add a element to list
-        newAssignmentElement.appendChild(newLinkElement)
-        // add list element ul parent
-        parentULElelement.appendChild(newAssignmentElement)
-        if(item.child != undefined && item.child.length > 0){
-            // create ul element for  child list
-            const childListUlElement = document.createElement("ul");
-            // add parent ul list to list item
-            newAssignmentElement.appendChild(childListUlElement);
-            // create child list item and add to new sublist
-            createList(item.child, childListUlElement);
-        }
-    });
-}
-const listElement = document.getElementById("assignments")
-createList(assignments, listElement);
+    
+    const createList = function(items, parentULElelement){
+        items.forEach(item=>{
+            // create LI and A element
+            const newAssignmentElement = document.createElement("li")
+            const newLinkElement = document.createElement("a")
+            // build A elements hyper link and text
+            newLinkElement.setAttribute("href", item.url)
+            newLinkElement.innerText = item.label
+            // add a element to list
+            newAssignmentElement.appendChild(newLinkElement)
+            // add list element ul parent
+            parentULElelement.appendChild(newAssignmentElement)
+            if(item.child != undefined && item.child.length > 0){
+                // create ul element for  child list
+                const childListUlElement = document.createElement("ul");
+                // add parent ul list to list item
+                newAssignmentElement.appendChild(childListUlElement);
+                // create child list item and add to new sublist
+                createList(item.child, childListUlElement);
+            }
+        });
+    }
+    const listElement = document.getElementById("assignments")
+    createList(assignments, listElement);
+    
