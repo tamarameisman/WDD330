@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7 Notes</title>
+</head>
+<body>
+    <h1>Week 7 notes</h1>
+    <h2>Fetch()</h2>
+    <p>
+        <ul>
+            <li>  fetch() allows you to make network requests similar to XMLHttpRequest (XHR). The main difference is that the Fetch API uses Promises, which enables a simpler and cleaner API, avoiding callback hell and having to remember the complex API of XMLHttpRequest.</li>
+            <li><a href="https://developers.google.com/web/updates/2015/03/introduction-to-fetch"></a>Fetch() code</li>
+            
+
+        </ul>
+        
+    </p>
+    <h2>Novice to Ninja : further Functions..chapter11</h2>
+    <p>
+        <ul>
+            
+            <li><a href="/Users/tamara/WDD330/WDD330/week07/notes/callback.html">example of callback</a></li>
+            <li>Immediately Invoked Function Expressions or IIFEs are functions that are enclosed in parentheses and immediately followed by double parentheses so they’re invoked. They are useful for namespacing variables and setting default values</li>
+            <li>Functions that return other functions are known as higher-order functions.</li>
+            <li>A generator is created by placing an asterisk character (*) after the function keyword</li>
+        </ul>
+        
+    </p>
+    <h2>Ajax..chapter 13</h2>
+    <p>
+        <ul>
+            <li>Ajax is a technique that allows web pages to communicate asynchronously with a server, and it dynamically updates web pages without reloading. This enables data to be sent and received in the background, as well as portions of a page to be updated in response to user events, while the rest of the program continues to run.</li>
+            <li>headers – A Headers object (see later section) containing any headers associated with the response</li>
+            <li>url – A string containing the URL of response
+            </li>
+            <li>redirected – A boolean value that specifies if the response is the result of a redirect</li>
+            <li>type – A string value of 'basic', 'cors', 'error' or 'opaque'. A value of 'basic' is used for a response from the same domain. A value of 'cors' means the data was received from a valid cross-origin request from a different domain. A value of 'opaque' is used for a response received from 'no-cors' request from another domain, which means access to the data will be severely restricted. A value of 'error' is used when a network error occurs.
+            </li>
+            <li>The redirect() method can be used to redirect to another URL. It creates a new promise that resolves to the response from the redirected URL.
+
+            </li>
+            <li>JSON is probably the most common format for AJAX responses. The json() method is used to deal with these by transforming a stream of JSON data into a promise that resolves to a JavaScript object.</li>
+            <li><p>fetch(url)</p>
+                <p>.then( response => response.json() ); // transforms the JSON data into a JavaScript object
+                <p>.then( data => console.log(Object.entries(data)) )</p>
+                <p>>.catch( error => console.log('There was an error: ', error))</p>
+            <li><a href="/Users/tamara/WDD330/WDD330/week07/fetch/fetch.html">fetch example</a></li>
+                
+               
+                
+                
+</body>
+</html>
