@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #test1 {
+            transform: translate(35px, -35px);
+            
+        }
+        #test2:hover {
+            color: aquamarine;
+            transform: translateX(40px);
+        }
+        #test3 {
+            transform: scale(1.25, .25);
+            margin-left: 90px;
+
+        }
+        #test4 {
+            transform: scale(.55, 2.25);
+
+        }
+        #test5:hover {
+            color: aquamarine;  
+            transform: translateY(40px) scale(1.5);
+        }
+        #test6:hover {
+            color: aquamarine;
+            transform: rotate(10deg) translateX(40px) scale(1.5);
+        }
+        #test7{
+            transform: skew(15deg, 4deg);
+        }
+        #test8:hover {
+            transform-origin: 0 0;
+            transform: rotate(10deg) translateX(40px) scale(1.5);
+
+        }
+        #test9:hover {
+            transform: translateX(200px) rotate(135deg);
+            transform-origin: 0 0;
+
+        }
+        #test10:hover {
+            transform: rotate(135deg) translateX(200px);
+
+        }
+        #test11:hover {
+            transition-property: transform;
+            transition-duration: 2s;
+            color: aquamarine;
+            transform: rotate(10deg) translateX(40px) scale(1.5);
+            
+        }
+        #test12:hover {
+            transition: transform 1s ease-out 50ms;
+            color: aquamarine;
+            transform: rotate(10deg) translateX(40px) scale(1.5);
+            
+        }
+        #test13:hover {
+            transition: transform 0.2s ease-out 50ms, color 0.1s linear 50ms;
+            color: aquamarine;
+            transform: rotate(10deg) translateX(40px) scale(1.5);
+            
+        }
+
+        @keyframes moveRight { 
+            from {
+            transform: translateX(-50%);
+            }
+            to {
+            transform: translateX(50%);
+            }
+        }
+        
+        @keyframes appearDisappear { 
+            0%, 100% {
+            opacity: 0;
+            }
+            20%, 80% {
+            opacity: 1;
+            }
+        }
+        
+        @keyframes bgMove {
+            100% {
+            background-position: 120% 0;
+            }
+        }
+        #test14 {
+            animation-name: moveRight;
+            animation-duration: 2s;
+            animation-iteration-count: 3;
+            
+        }
+        
+        #test15 {
+            animation-name: appearDisappear; 
+            animation-duration: 300ms; 
+            animation-timing-function: ease-in;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+            animation-delay: 5s;
+            animation-fill-mode: backwards;
+            animation-play-state: running;
+}
+        @keyframes bike {
+            0% {
+            background-position: 0 0;
+            }
+            100% {
+            background-position: -360px 0;
+            }
+        }
+        @keyframes move {
+            0% {
+            transform: translateX(-100px);
+            }
+            100% {
+            transform: translateX(100px);
+            }
+        }  
+                
+        #test16:after {
+            content: '';
+            width: 200px;
+            height: 300px;
+            background-image: url(/images/tamarapicture.jpg);
+            display: block;
+            margin: auto;
+            animation: 
+                0.4s steps(4, end) infinite 50ms bike,
+                8s linear infinite 50ms move;
+            animation-play-state: paused;
+        }       
+        #test16:hover:after {
+            animation-play-state: running;
+}
+        .myCanvas {
+            border: dotted 2px black;
+        }
+        .draganddrop .mc {
+            text-align: center; 
+        }
+    </style>
+    <h1>test</h1>
+    <h1 id="test1">transform forward and up</h1>
+    <h1 id="test2">transform and Hover for different color and move to right</h1>
+    <h1 id="test3">transform/scale: make wide and short</h1>
+    <h1 id="test4">transform/scale: make tall and thin</h1>
+    <h1 id="test5">transform/scale up 1.5/hover/move up</h1>
+    <h1 id="test6">transform: rotate 10 degrees, translate (move forward) and scale up 1.5</h1>
+    <h1 id="test7">transform: skew(15deg, 4deg)</h1>
+    <h1 id="test8">Hover..transform-origin 50% 50 rotate(10deg)..etc</h1>
+    <h1 id="test9">HI!!!</h1>
+    <h1 id="test10">HI!!!</h1>
+    <h1 id="test11">Adding a transition-property:transform; 2second duration on hover </h1>
+    <h1 id="test12">transition shorthand with transform, duration, timing, and delay</h1>
+    <h1 id="test13">another test</h1>
+    <h1 id="test14">Animations</h1>
+    <h1 id="test15">appearDisppear animation</h1>
+    <h1 id="test16">lots of animation...</h1>
+    <canvas id="myCanvas" class="myCanvas" width="200" height="200">
+        Sorry! Your browser doesn’t support Canvas.
+    </canvas>
+    <h2>Demo 5: Saving canvas drawings</h2>
+    <canvas width="200" height="200" id="demo5" class="myCanvas">
+        Sorry! Your browser doesn't support Canvas.
+    </canvas>
+
+    <button name="saveButton" id="saveButton">Save Drawing</button>
+
+    <h2>Demo 6: Drawing an image to the canvas</h2>
+    <canvas width="200" height="200" id="demo6" class="myCanvas">
+        Sorry! Your browser doesn't support Canvas.
+    </canvas>
+
+    <img data-src="https://learnable-static.s3.amazonaws.com/premium/reeedr/books/html5-css3-for-the-real-world-2nd-edition/images/html5-logo.png" id="myImageElem">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+        <circle cx="50" cy="50" r="25" fill="red"/>
+    </svg>
+   
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 200 200">
+        <desc>Drawing a rectangle</desc>
+        <rect x="10" y="10" width="100" height="100"  
+            fill="blue" stroke="red" stroke-width="3"  />  
+        
+    </svg>
+    <article id="ac3">
+        <h1>Wai-Aria? HAHA!</h1>
+        <h2>Form Accessibility</h2>
+                
+        <img data-src="https://learnable-static.s3.amazonaws.com/premium/reeedr/books/html5-css3-for-the-real-world-2nd-edition/images/cat.png" alt="WAI-ARIA Cat">
+                
+        <div class="content">
+        <p id="mouseContainer" class="mc">
+            <img data-src="https://learnable-static.s3.amazonaws.com/premium/reeedr/books/html5-css3-for-the-real-world-2nd-edition/images/computer-mouse-pic.svg" 
+    ↵alt="mouse treat" id="mouse1" draggable="true">
+            <img data-src="https://learnable-static.s3.amazonaws.com/premium/reeedr/books/html5-css3-for-the-real-world-2nd-edition/images/computer-mouse-pic.svg"  
+    ↵alt="mouse treat" id="mouse2" draggable="true">
+            <img data-src="https://learnable-static.s3.amazonaws.com/premium/reeedr/books/html5-css3-for-the-real-world-2nd-edition/images/computer-mouse-pic.svg" 
+    ↵alt="mouse treat" id="mouse3" draggable="true">
+        </p>
+    …
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+        context.strokeStyle = "red";
+        context.fillStyle = "rgba(0, 0, 255, 0.5)";
+        context.fillRect(10, 10, 100, 100);   
+        context.strokeRect(10, 10, 100, 100);
+
+        function drawPattern() {
+            var canvas = document.getElementById("demo2");
+            var context = canvas.getContext("2d");
+            context.strokeStyle = "red";
+        
+            var img = new Image(); 
+            img.src = "/images/tamarapicture.jpg";
+            img.onload = function() { 
+            var pattern = context.createPattern(img, "repeat"); 
+            context.fillStyle = pattern;                        
+            context.fillRect(10, 10, 100, 100);                  
+            context.strokeRect(10, 10, 100, 100);  
+            }; 
+        }
+        function drawCircle(canvas) {
+            var context = canvas.getContext("2d");
+            context.beginPath();
+            context.arc(100, 100, 50, 0, Math.PI*2, true);
+            context.closePath();
+            context.strokeStyle = "red";
+            context.fillStyle = "blue";
+            context.lineWidth = 3;
+            context.fill(); 
+            context.stroke(); 
+        }
+        window.addEventListener("load", drawImageToCanvas, false);
+        function drawImageToCanvas() {
+            var canvas = document.getElementById("demo6");
+            var context = canvas.getContext("2d");
+            var image = document.getElementById("myImageElem");
+        }
+        
+
+    </script>
+</body>
+</html>

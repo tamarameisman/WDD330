@@ -1,0 +1,76 @@
+body {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%), inset 0 -3px 0 rgb(0 0 0 / 22%);
+
+}
+header {
+    width: 100%;
+    background-color: black;
+    color: gold;
+    border-top: gold 10px solid;
+    border-bottom: gold 10px solid;
+    text-align: center;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%), inset 0 -3px 0 rgb(0 0 0 / 22%);
+    text-shadow: #cccccc 5px;
+}
+
+
+h1:hover span {
+    color: #484848;  
+    transform: translate(45px, -45px);
+}
+.people {
+    background-color: #eee;
+    padding: 10px;
+    border-bottom: 2px solid #cccccc;
+
+}
+.personName {
+    font-size: large;
+    font-weight:700;
+
+}
+.personRow {
+    padding: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%), inset 0 -3px 0 rgb(0 0 0 / 22%);
+
+}
+.detailRow {
+    padding-left: 10px;
+    transition: all 2s;
+}
+.hidden{
+    display:none;
+}
+.title {
+    font-weight: 700;
+}
+footer {
+    width: 100%;
+    display: flex;
+    grid-column: 2;
+    grid-row: 1;
+}
+button {
+    padding: 10px;
+    width: 50%;
+    font-size: 1.2rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%), inset 0 -3px 0 rgb(0 0 0 / 22%);
+    border: none;
+}
+@keyframes moveRight { 
+    from {
+    transform: translateX(-50%);
+    }
+    to {
+    transform: translateX(50%);
+    }
+}
+h1 {
+
+    animation-name: moveRight;
+    animation-duration: 2s;
+    animation-iteration-count: 3;
+    animation-direction: alternate-reverse;
+    
+
+}

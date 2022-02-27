@@ -1,6 +1,6 @@
 const assignments = [
     {
-        label: "Week 01 notes",
+        label: "Week01 notes",
         url: "week01/index.html" ,
         child:[
             {
@@ -10,7 +10,7 @@ const assignments = [
         ]
     },
     {
-        label: "Week 02 notes",
+        label: "Week02 notes",
         url: "week02/week2_notes.html" ,
         child:[
             {
@@ -45,7 +45,7 @@ const assignments = [
         ]
     },
     {
-        label: "Week 03 notes",
+        label: "Week03 notes",
         url: "week03/index.html" ,
         child:[
             {
@@ -113,7 +113,7 @@ const assignments = [
     
     
     {
-        label: "Week 07 notes",
+        label: "Week07 notes",
         url: "week07/index.html" ,
         child:[
             {
@@ -130,6 +130,21 @@ const assignments = [
             },
         ]
     },
+
+    {
+        label: "Week08 Notes",
+        url: "week08/notes.html" ,
+        child:[
+            {
+                label: "Team Activity",
+                url: "week08/index.html" 
+            },
+            {
+                label: "Transforms, canvas, svg practice",
+                url: "week08/transform.html" 
+            },
+        ]
+    },        
 ]
 
 const createList = function(items, parentULElelement){
