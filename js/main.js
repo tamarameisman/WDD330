@@ -144,7 +144,29 @@ const assignments = [
                 url: "week08/transform.html" 
             },
         ]
-    },        
+    },     
+    {
+        label: "Week09 Notes",
+        url: "week09/note.html" ,
+        child:[
+            {
+                label: "Team Activity",
+                url: "week03/drum_kit" 
+            },
+            {
+                label: "Animation in JS",
+                url: "week09/animation.html" 
+            },
+            {
+                label: "Web worker api",
+                url: "week09/factors.html" 
+            },
+            {
+                label: "Websocket, Audio, Video, Draw in Canvas",
+                url: "week09/websocket.html" 
+            },
+        ]
+    },           
 ]
 
 const createList = function(items, parentULElelement){
