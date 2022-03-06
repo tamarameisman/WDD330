@@ -165,6 +165,10 @@ const assignments = [
                 label: "Websocket, Audio, Video, Draw in Canvas",
                 url: "week09/websocket.html" 
             },
+            {
+                label: "Block 2 Challenge Proposals",
+                url: "week09/parcel/build/siteplan.html" 
+            },
         ]
     },           
 ]
