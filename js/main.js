@@ -170,7 +170,21 @@ const assignments = [
                 url: "week09/parcel/build/siteplan.html" 
             },
         ]
-    },           
+    },  
+    {
+        label: "Week10 Notes",
+        url: "week10/notes.html" ,
+        child:[
+            {
+                label: "Team Activity",
+                url: "tba" 
+            },
+            {
+                label: "",
+                url: "tba" 
+            },
+        ]
+    },             
 ]
 
 const createList = function(items, parentULElelement){
