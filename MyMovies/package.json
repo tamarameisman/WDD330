@@ -1,0 +1,19 @@
+{
+  "name": "mymovies",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel serve src/index.html ",
+    "prebuild": "rimraf dist/*",
+    "build": "parcel build src/index.html --public-url ./",
+    "watch": "parcel watch src/index.html"
+  },
+  "author": "Tamara Meisman",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.4.1",
+    "rimraf": "^3.0.0"
+  },
+  "dependencies": {
+  }
+}
