@@ -5,7 +5,7 @@
   "scripts": {
     "start": "parcel serve src/index.html ",
     "prebuild": "rimraf dist/*",
-    "build": "parcel build src/index.html --public-url ./",
+    "build": "parcel build src/index.html --public-url /WDD330/MyMovies/dist/",
     "watch": "parcel watch src/index.html"
   },
   "author": "Tamara Meisman",
