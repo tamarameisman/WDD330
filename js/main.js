@@ -184,6 +184,16 @@ const assignments = [
                 url: "tba" 
             },
         ]
+    },     
+    {
+        label: "Final Notes",
+        url: "week10/notes.html" ,
+        child:[
+            {
+                label: "My Movies",
+                url: "MyMovies/dist/" 
+            },
+        ]
     },             
 ]
 
