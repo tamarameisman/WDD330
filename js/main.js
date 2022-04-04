@@ -186,11 +186,11 @@ const assignments = [
         ]
     },     
     {
-        label: "Final Notes",
-        url: "week10/notes.html" ,
+        label: "Final Challenge",
+        
         child:[
             {
-                label: "My Movies",
+                label: "Movies Together",
                 url: "MyMovies/dist/" 
             },
         ]
