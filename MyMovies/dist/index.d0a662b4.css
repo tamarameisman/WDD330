@@ -1,0 +1,175 @@
+body {
+  box-shadow: 0 3px 10px #0003, inset 0 -3px #00000038;
+}
+
+html {
+  line-height: 1.15;
+}
+
+header {
+  background-color: #afd275;
+  padding: 1rem 2%;
+}
+
+header h1 {
+  text-shadow: 2px 2px 4px #888;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+header h2 {
+  text-shadow: 2px 2px 4px #888;
+  margin: 0;
+  box-shadow: 0 3px 10px #0003, inset 0 -3px #00000038;
+}
+
+.logo {
+  width: 75px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.addMovies {
+  background-color: #eee;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#moviename {
+  padding: 10px;
+}
+
+input {
+  height: 2rem;
+}
+
+.movie_poster_container {
+  opacity: 0;
+  transition: all .6s ease-out;
+}
+
+.movie_poster_container.show {
+  opacity: 1;
+}
+
+.movie_poster.added {
+  background-color: #ccc;
+}
+
+.movie_poster.added > img {
+  opacity: .5;
+  filter: blur(5px);
+}
+
+.movie_poster_container.liked_movie {
+  transform: translateY(0);
+  box-shadow: 1px 2px #f5f3f5, 0 0 80px #f07186, 0 0 50px #eee;
+}
+
+.movie_poster_container.watched_movie > .movie_poster > img {
+  opacity: .5;
+}
+
+.movie_poster.added > button {
+  display: none;
+}
+
+.movie_poster > button {
+  width: 100%;
+}
+
+h1:hover span {
+  color: #484848;
+  transform: translate(45px, -45px);
+}
+
+.myMoviesList, .searchMoviesList {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 10px 20px;
+  display: flex;
+}
+
+.movie_poster.image, .movie_poster.title, .movie_poster.year {
+}
+
+.hidden {
+  display: none;
+}
+
+.title {
+  font-weight: 700;
+}
+
+footer {
+  width: 100%;
+  grid-area: 1 / 2;
+  display: flex;
+}
+
+button {
+  width: 50%;
+  background-color: #afd275;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 1.2rem;
+  box-shadow: 0 3px 10px #0003, inset 0 -3px #00000038;
+}
+
+@keyframes moveRight {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(50%);
+  }
+}
+
+h1 {
+  animation-name: moveRight;
+  animation-duration: 2s;
+  animation-iteration-count: 3;
+  animation-direction: alternate-reverse;
+}
+
+.slideShelf {
+  background-color: #eee;
+  border-width: 0;
+  margin: 0;
+  display: none;
+}
+
+.slideShelf.addActive {
+  display: block;
+}
+
+form {
+  padding: 20px;
+}
+
+.container {
+  height: calc(100vh - 230px);
+}
+
+.container.addActive {
+}
+
+.container.addActive > .myMoviesList {
+  display: none;
+}
+
+.scroll {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/*# sourceMappingURL=index.d0a662b4.css.map */
