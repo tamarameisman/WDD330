@@ -3,7 +3,7 @@ import { getJSON } from './utilities.js';
 export default class imdbMovies {
     apikey = "cee23b41"
     constructor() {
-        this.baseUrl = `http://www.omdbapi.com/?apikey=${this.apikey}&`;
+        this.baseUrl = `https://www.omdbapi.com/?apikey=${this.apikey}&`;
         this._myMovies = [];
     }
     async searchByMovieTitle(title) {
