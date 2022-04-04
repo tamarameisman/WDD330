@@ -1,185 +1,184 @@
 body {
-    box-shadow: 0 3px 10px #0003, inset 0 -3px #00000038;
+  box-shadow: 0 3px 10px #0003, inset 0 -3px #00000038;
   }
   
-  html {line-height: 1.15;}
+html {line-height: 1.15;}
   
   
-  header {
-      background-color: #AFD275;
-      padding: 1rem 2%;
-      
+header {
+  background-color: #AFD275;
+  padding: 1rem 2%;
+  margin-bottom: 10px;
   }
-  header h1 {
-      text-shadow: 2px 2px 4px #888;
-      font-size: 1.8rem;
-      text-align: center;
+header h1 {
+  text-shadow: 2px 2px 4px #888;
+  font-size: 1.8rem;
+  text-align: center;
 
   }
-  header h2 {
-      margin: 0;
-      text-shadow: 2px 2px 4px #888;
-      box-shadow: 0 3px 10px #0003, inset 0 -3px #00000038;
-  
+header h2 {
+  margin: 0;
+  text-shadow: 2px 2px 4px #888;
+  box-shadow: 0 3px 10px #0003, inset 0 -3px #00000038;
+
   }
-  .logo {
-    display: block;
-    width: 75px;
-    margin-left: auto;
-    margin-right: auto;
+.logo {
+  display: block;
+  width: 75px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.addMovies {
+display: block;
+margin-left: auto;
+margin-right: auto;
+border-radius: 10px;
+background-color: #eeeeee;
+
+}
+
+  #moviename {
+    padding: 10px;
+
   }
+  input {
+    height: 2rem;
+  }
+.movie_poster_container {
+  opacity: 0;
+  transition: all .6s ease-out;
+}
+
+.movie_poster_container.show {
+  opacity: 1;
+}
+
+.movie_poster.added {
+  background-color: #ccc;
+}
+
+.movie_poster.added > img {
+  opacity: .5;
+  filter: blur(5px);
+}
+
+.movie_poster_container.liked_movie {
+  transform: translateY(0);
+  /*box-shadow: inset 0 0 60px #f5f5f5, inset 20px 0 80px #f0f, inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff, 0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;*/
+  box-shadow:  1px 2px #f5f3f5, 0 0 80px rgb(240, 113, 134), 0 0 50px #eee;
+}
+
+.movie_poster_container.watched_movie > .movie_poster > img {
+  opacity: .5;
+}
+
+.movie_poster.added > button {
+  display: none;
+}
+
+.movie_poster > button {
+  width: 100%;
+}
+
+h1:hover span {
+  color: #484848;
+  transform: translate(45px, -45px);
+}
+
+.myMoviesList, .searchMoviesList {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 10px 20px;
+  display: flex;
+}
+
+.movie_poster.image, .movie_poster.title, .movie_poster.year {
+}
+
+.hidden {
+  display: none;
+}
+
+.title {
+  font-weight: 700;
+}
+
+footer {
+  width: 100%;
+  grid-area: 1 / 2;
+  display: flex;
+}
+
+button {
+  width: 50%;
+  border: none;
+  padding: 10px;
+  font-size: 1.2rem;
+  box-shadow: 0 3px 10px #0003, inset 0 -3px #00000038;
+  border-radius: 10px;
+  background-color: #AFD275;
+  margin-top: 10px;
+}
+
+@keyframes moveRight {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(50%);
+  }
+}
+
+h1 {
+  animation-name: moveRight;
+  animation-duration: 2s;
+  animation-iteration-count: 3;
+  animation-direction: alternate-reverse;
+}
+
+.slideShelf {
   
-  .addMovies {
+  
+  background-color: #eeeeee;
+  border-width: 0;
+  margin: 0;
+  display: none;
+  
+}
+
+.slideShelf.addActive {
+  display: block;
+}
+form{
+  padding: 20px;
+}
+.container {
+  height: calc(100vh - 230px);
+}
+
+.container.addActive {
+  
+}
+.container.addActive>.myMoviesList{
+  display:none
+}
+
+.scroll {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+footer {
+  background-color: #AFD275;
+  margin-top: 10px;
+
+}
+footer p {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 10px;
-  background-color: #eeeeee;
-  
   }
-  /*header {
-    width: 100%;
-    color: gold;
-    text-align: center;
-    text-shadow: #ccc 5px;
-    height: 100px;
-    background-color: #000;
-    border-top: 10px solid gold;
-    border-bottom: 10px solid gold;
-    box-shadow: 0 3px 10px #0003, inset 0 -3px #00000038;
-  }*/
-   #moviename {
-     padding: 10px;
-  
-   }
-   input {
-     height: 2rem;
-   }
-  .movie_poster_container {
-    opacity: 0;
-    transition: all .6s ease-out;
-  }
-  
-  .movie_poster_container.show {
-    opacity: 1;
-  }
-  
-  .movie_poster.added {
-    background-color: #ccc;
-  }
-  
-  .movie_poster.added > img {
-    opacity: .5;
-    filter: blur(5px);
-  }
-  
-  .movie_poster_container.liked_movie {
-    transform: translateY(0);
-    /*box-shadow: inset 0 0 60px #f5f5f5, inset 20px 0 80px #f0f, inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff, 0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;*/
-    box-shadow:  1px 2px #f5f3f5, 0 0 80px rgb(240, 113, 134), 0 0 50px #eee;
-  }
-  
-  .movie_poster_container.watched_movie > .movie_poster > img {
-    opacity: .5;
-  }
-  
-  .movie_poster.added > button {
-    display: none;
-  }
-  
-  .movie_poster > button {
-    width: 100%;
-  }
-  
-  h1:hover span {
-    color: #484848;
-    transform: translate(45px, -45px);
-  }
-  
-  .myMoviesList, .searchMoviesList {
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 10px 20px;
-    display: flex;
-  }
-  
-  .movie_poster.image, .movie_poster.title, .movie_poster.year {
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  .title {
-    font-weight: 700;
-  }
-  
-  footer {
-    width: 100%;
-    grid-area: 1 / 2;
-    display: flex;
-  }
-  
-  button {
-    width: 50%;
-    border: none;
-    padding: 10px;
-    font-size: 1.2rem;
-    box-shadow: 0 3px 10px #0003, inset 0 -3px #00000038;
-    border-radius: 10px;
-    background-color: #AFD275;
-    margin-top: 10px;
-  }
-  
-  @keyframes moveRight {
-    from {
-      transform: translateX(-50%);
-    }
-  
-    to {
-      transform: translateX(50%);
-    }
-  }
-  
-  h1 {
-    animation-name: moveRight;
-    animation-duration: 2s;
-    animation-iteration-count: 3;
-    animation-direction: alternate-reverse;
-  }
-  
-  .slideShelf {
-    
-    
-    background-color: #eeeeee;
-    border-width: 0;
-    margin: 0;
-    display: none;
-    
-  }
-  
-  .slideShelf.addActive {
-    display: block;
-  }
-  form{
-    padding: 20px;
-  }
-  .container {
-    height: calc(100vh - 230px);
-  }
-  
-  .container.addActive {
-    
-  }
-  .container.addActive>.myMoviesList{
-    display:none
-  }
-  
-  .scroll {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-   
