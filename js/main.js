@@ -193,6 +193,10 @@ const assignments = [
                 label: "Movies Together",
                 url: "MyMovies/dist/" 
             },
+            {
+                label: "Final Video Youtube Link",
+                url: "https://www.youtube.com/watch?v=gWQGBLpS4M8" 
+            },
         ]
     },             
 ]
